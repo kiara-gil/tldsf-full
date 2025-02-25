@@ -236,7 +236,7 @@ body {
     display: none; /* Hide book in portrait mode */
   }
 
-  body {
+  html,body {
     overflow-x: hidden;
     overflow-y: hidden; /* Disable both horizontal and vertical scrolling */
   }
@@ -264,7 +264,7 @@ body {
     display: none !important;
   }
 
-  body {
+  html,body {
     overflow-x: hidden;
     overflow-y: hidden; /* Disable both horizontal and vertical scrolling */
   }
