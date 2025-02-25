@@ -61,6 +61,25 @@ $(document).ready(function () {
     flipbook.turn("size", newSize.width, newSize.height);
   });
 
+  // Show or hide the flipbook based on orientation
+  function checkOrientation() {
+    if (window.innerWidth > window.innerHeight) {
+      // In landscape mode, show the flipbook
+      $(".flipbook-container").show();
+      $(".mobile-message").hide();
+    } else {
+      // In portrait mode, hide the flipbook and show the message
+      $(".flipbook-container").hide();
+      $(".mobile-message").show();
+    }
+  }
+
+  // Initial check on page load
+  checkOrientation();
+
+  // Check orientation whenever the window is resized
+  $(window).on("resize", checkOrientation);
+
   // Arrow navigation
   $("#next-page").on("click", function () {
     flipbook.turn("next");
