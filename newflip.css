@@ -214,7 +214,7 @@ body {
   }
 
   .arrows-container {
-    display: none;
+    display: none !important;
   }
 
   .buttons-container {
@@ -260,6 +260,6 @@ body {
 
 @media screen and (orientation: landscape) {
   .mobile-message {
-    display: none;
+    display: none !important;
   }
 }
