@@ -259,6 +259,9 @@ body {
 }
 
 @media screen and (orientation: landscape) {
+  .flipbook-container {
+    top: 0px;
+  }
   .mobile-message {
     display: none !important;
   }
