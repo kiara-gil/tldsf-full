@@ -59,12 +59,13 @@ $(document).ready(function () {
   $(window).on("resize", function () {
     var newSize = calculateFlipbookSize();
     flipbook.turn("size", newSize.width, newSize.height);
+    checkOrientation();  // Recheck the orientation on resize
   });
 
   // Show or hide the flipbook based on orientation
   function checkOrientation() {
     if (window.innerWidth > window.innerHeight) {
-      // In landscape mode, show the flipbook
+      // In landscape mode, show the flipbook and hide the message
       $(".flipbook-container").show();
       $(".mobile-message").hide();
     } else {
@@ -76,9 +77,6 @@ $(document).ready(function () {
 
   // Initial check on page load
   checkOrientation();
-
-  // Check orientation whenever the window is resized
-  $(window).on("resize", checkOrientation);
 
   // Arrow navigation
   $("#next-page").on("click", function () {
